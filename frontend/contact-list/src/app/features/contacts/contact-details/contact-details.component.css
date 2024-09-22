@@ -1,0 +1,129 @@
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-body label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-body input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.modal-body input[type="text"]:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+.button {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #4facfe;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  background-color: #1a78d4;
+  transform: translateY(1px);
+}
+
+.button-wrapper{
+  display: flex;
+  gap: 0.3rem
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc; /* Default border */
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input.error {
+  border-color: red; /* Red border for invalid input */
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}

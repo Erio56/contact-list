@@ -1,0 +1,19 @@
+<div class="login-container">
+  <div class="login-form">
+    <h2>Iniciar Sesión</h2>
+    <form>
+      <label for="username">
+        Nombre de usuario
+        <input [(ngModel)]="username" type="text" name="username" id="username" required>
+      </label>
+      <label for="password">
+        Contraseña
+        <input [(ngModel)]="password" type="password" name="password" id="password" required>
+      </label>
+    </form>
+    <button (click)="login()" class="login-button">Iniciar Sesión</button>
+    <div class="redirect">
+      <p>¿No tienes una cuenta? <a routerLink="/register">Regístrate aquí</a></p>
+    </div>
+  </div>
+</div>

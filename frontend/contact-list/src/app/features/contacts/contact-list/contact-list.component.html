@@ -1,0 +1,23 @@
+<div class="contacts-container">
+  <div class="header">
+    <button (click)="openCreationModal()" class="button">Crear nuevo contacto</button>
+  </div>
+
+  <div class="contacts-list">
+    @for (contact of contacts(); track $index) {
+      <div class="contact-item" (click)="openModal(contact)">
+        <div>
+          {{contact.name}}
+        </div>
+      </div>
+    } @empty {
+      <div class="empty-message">
+        La lista de contactos está vacía.
+      </div>
+    }
+  </div>
+
+  @if (modalIsOpen) {
+    <app-contact-details [contact]="selectedContact" (closeModal)="closeModal()" [createMode]="creationModeModal"/>
+  }
+</div>
