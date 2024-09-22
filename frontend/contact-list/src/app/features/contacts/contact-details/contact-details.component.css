@@ -113,13 +113,13 @@ input {
   width: 100%;
   padding: 10px;
   margin: 5px 0;
-  border: 1px solid #ccc; /* Default border */
+  border: 1px solid #ccc;
   border-radius: 4px;
   transition: border-color 0.3s;
 }
 
 input.error {
-  border-color: red; /* Red border for invalid input */
+  border-color: red;
 }
 
 .error-message {

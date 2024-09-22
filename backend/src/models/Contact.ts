@@ -22,7 +22,6 @@ class Contact extends Model {
   @Column({ allowNull: true })
   mobilePhone: string;
 
-  // Foreign key to reference the owner (User)
   @ForeignKey(() => User)
   @Column
   ownerId: number;
